@@ -59,6 +59,7 @@ Structured an analytical star schema optimized for fast aggregations and dashboa
 Built natively within Databricks Lakehouse Dashboards, providing real-time slicing by geographic region, transaction type, and property attributes.
 
 ![Real Estate Lakehouse Dashboard](docs/img/dashboard.png)
+![Real Estate Lakehouse Dashboard](docs/img/filters.png)
 
 ### Key Market Takeaways:
 * **Market Sample:** 449,060 qualified listings indexed.
@@ -72,18 +73,19 @@ Built natively within Databricks Lakehouse Dashboards, providing real-time slici
 
 The entire pipeline is orchestrated via **Databricks Workflows** as an automated DAG (Directed Acyclic Graph):
 
-         [ Task: etl_bronze ]
-                  │
-                  ▼
-        [ Task: etl_silver ]
-                  │
-    ┌─────────────┼─────────────┬─────────────┐
-    ▼             ▼             ▼             ▼
-[dim_zona]  [dim_tiempo]  [dim_tipo]  [dim_caract]
-    └─────────────┬─────────────┴─────────────┘
-                  │ (Parallel Execution)
-                  ▼
-        [ Task: etl_gold_fact ]
+            [ Task: etl_bronze ]
+                      │
+                      ▼
+            [ Task: etl_silver ]
+                      │
+        ┌─────────────┼─────────────┬─────────────┐
+        ▼             ▼             ▼             ▼
+    [dim_zona]  [dim_tiempo]  [dim_tipo]  [dim_caract]
+        └─────────────┬─────────────┴─────────────┘
+                      │ (Parallel Execution)
+                      ▼
+            [ Task: etl_gold_fact ]
+
 
 * **Decoupled Architecture:** Schema definitions (DDLs) are decoupled from ingestion runs (ETLs), preventing metadata locking in production.
 * **Parallel Execution:** Gold dimension tables run simultaneously after Silver completion, cutting overall DAG execution runtime.
