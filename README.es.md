@@ -12,22 +12,22 @@ Implementación completa de un Lakehouse para Ingeniería de Datos construido so
 
 La plataforma implementa una **Arquitectura Medallion (Bronze $\rightarrow$ Silver $\rightarrow$ Gold)** con gobernanza de datos a través de Unity Catalog y una capa semántica para analítica:
 
-[ Zona de Aterrizaje / Volumes ]
-    │
-    ▼
-[ BRONZE ] Tabla Delta Raw (ingesta batch, schema enforcement, append/overwrite)
-    │
-    ▼
-[ SILVER ] Limpieza y Enriquecimiento (unificación a USD, filtros P05/P95, parsing con regex)
-    │
-    ▼
-[ GOLD ] Modelo Dimensional / Star Schema (Kimball: Fact + 4 Dimensiones con Surrogate Keys)
-    │
-    ▼
-[ SEMÁNTICA ]  Vistas Analíticas (Data Marts desnormalizados para BI)
-    │
-    ▼
-[ PRESENTACIÓN ] Databricks Lakehouse Dashboards y Reportes de Negocio
+    [ Zona de Aterrizaje / Volumes ]
+      │
+      ▼
+    [ BRONZE ] Tabla Delta Raw (ingesta batch, schema enforcement, append/overwrite)
+        │
+        ▼
+    [ SILVER ] Limpieza y Enriquecimiento (unificación a USD, filtros P05/P95, parsing con regex)
+        │
+        ▼
+    [ GOLD ] Modelo Dimensional / Star Schema (Kimball: Fact + 4 Dimensiones con Surrogate Keys)
+        │
+        ▼
+    [ SEMÁNTICA ]  Vistas Analíticas (Data Marts desnormalizados para BI)
+        │
+        ▼
+    [ PRESENTACIÓN ] Databricks Lakehouse Dashboards y Reportes de Negocio
 
 ---
 
