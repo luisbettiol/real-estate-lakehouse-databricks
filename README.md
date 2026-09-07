@@ -12,22 +12,22 @@ End-to-end Data Engineering Lakehouse implementation built on **Databricks**, **
 
 The platform implements a classic **Medallion Architecture (Bronze $\rightarrow$ Silver $\rightarrow$ Gold)** with Unity Catalog governance and an analytics semantic layer:
 
-[ Landing Zone / Volumes ]
-    │
-    ▼
-[ BRONZE ]  Raw Delta Table (batch ingestion, append/overwrite, schema enforcement)
-    │
-    ▼
-[ SILVER ]  Cleaned & Enriched (currency standardization to USD, outlier removal via P05/P95, regex mapping)
-    │
-    ▼
-[ GOLD ]   Dimensional Model / Star Schema (Kimball: Fact + 4 Dimensions with Surrogate Keys)
-    │
-    ▼
-[ SEMANTIC ] Analytics Views (denormalized marts for BI consumption)
-    │
-    ▼
-[ PRESENTATION ] Databricks Lakehouse Dashboards & BI Reporting
+    [ Landing Zone / Volumes ]
+        │
+        ▼
+    [ BRONZE ]  Raw Delta Table (batch ingestion, append/overwrite, schema enforcement)
+        │
+        ▼   
+    [ SILVER ]  Cleaned & Enriched (currency standardization to USD, outlier removal via P05/P95, regex mapping)
+        │
+        ▼
+    [ GOLD ]   Dimensional Model / Star Schema (Kimball: Fact + 4 Dimensions with Surrogate Keys)
+        │
+        ▼
+    [ SEMANTIC ] Analytics Views (denormalized marts for BI consumption)
+        │
+        ▼
+    [ PRESENTATION ] Databricks Lakehouse Dashboards & BI Reporting
 
 ---
 
