@@ -4,7 +4,7 @@
 
 # Real Estate Lakehouse Platform (Argentina Market)
 
-End-to-end Data Engineering Lakehouse implementation built on **Databricks**, **Delta Lake**, and **Apache Spark**. The pipeline ingests, cleans, models, and orchestrates over 440,000 real estate property listings across the Buenos Aires Metropolitan Area (CABA and GBA), delivering a business-ready dimensional model (Star Schema) and an executive dashboard.
+End-to-end Data Engineering Lakehouse implementation built on **Databricks**, **Delta Lake**, and **Apache Spark**. The pipeline ingests, cleans, models, and orchestrates over 1,200,000 real estate property listings across the Buenos Aires Metropolitan Area (CABA and GBA), delivering a business-ready dimensional model (Star Schema) and an executive dashboard.
 
 ---
 

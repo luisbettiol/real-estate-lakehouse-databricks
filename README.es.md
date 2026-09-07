@@ -4,7 +4,7 @@
 
 # Plataforma Lakehouse Inmobiliaria (Mercado Argentina)
 
-Implementación completa de un Lakehouse para Ingeniería de Datos construido sobre **Databricks**, **Delta Lake** y **Apache Spark**. El pipeline ingesta, limpia, modela y orquesta más de 440.000 propiedades listadas en el Área Metropolitana de Buenos Aires (CABA y GBA), entregando un modelo dimensional analítico (Star Schema / Modelo en Estrella) y un dashboard ejecutivo.
+Implementación completa de un Lakehouse para Ingeniería de Datos construido sobre **Databricks**, **Delta Lake** y **Apache Spark**. El pipeline ingesta, limpia, modela y orquesta más de 1.200.000 propiedades listadas en el Área Metropolitana de Buenos Aires (CABA y GBA), entregando un modelo dimensional analítico (Star Schema / Modelo en Estrella) y un dashboard ejecutivo.
 
 ---
 
